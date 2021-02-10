@@ -40,6 +40,10 @@ input, textarea, button, select, label, a, div {
 	-webkit-tap-highlight-color: transparent;
 }
 
+input, button, hr {
+	overflow: visible;
+}
+
 input:invalid {
 	box-shadow: none;
 }
