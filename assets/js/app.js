@@ -1,6 +1,6 @@
 /**
- * App
- * Copyright 2020 Abel Brencsan
+ * App - v.1.1.0
+ * Copyright 2021 Abel Brencsan
  * Released under the MIT License
  */
 
