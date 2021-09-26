@@ -132,8 +132,8 @@
 
 		@for $i from 2 through $grid-columns {
 			&.grid-col--1of#{$i} {
-				flex: 0 0 (100% / $i);
-				max-width: (100% / $i);
+				flex: 0 0 math.div(100%, $i);
+				max-width: math.div(100%, $i);
 			}
 		}
 
@@ -156,8 +156,8 @@
 
 				@for $i from 2 through $grid-columns {
 					&.grid-col--#{$breakpoint}--1of#{$i} {
-						flex: 0 0 (100% / $i);
-						max-width: (100% / $i);
+						flex: 0 0 math.div(100%, $i);
+						max-width: math.div(100%, $i);
 					}
 				}
 			}

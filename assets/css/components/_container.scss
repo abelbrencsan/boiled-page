@@ -6,7 +6,7 @@ div.container {
 	width: 90%;
 	
 	&.container--narrow {
-		max-width: ($container-width / 1.5) - $grid-gutter;
+		max-width: ($container-width * 0.666) - $grid-gutter;
 	}
 
 	&.container--half {

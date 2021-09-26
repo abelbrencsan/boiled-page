@@ -1,8 +1,8 @@
 // Required modules
 var gulp = require('gulp');
-var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var minify = require('gulp-uglify');
+var sass = require('gulp-sass')(require('sass'));
 
 // Style path and files
 var stylePath = 'assets/css/';
