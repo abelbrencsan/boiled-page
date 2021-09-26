@@ -101,7 +101,7 @@ pre {
 // Scheme specific base typography
 @each $scheme in map-keys($schemes) {
 	@if (map-val($schemes, $scheme, generate-scheme) and $scheme-includes-base-typography) {
-		&.scheme--#{$scheme} {
+		.scheme--#{$scheme} {
 			color: map-val($schemes, $scheme, fg-color);
 
 			hr {

@@ -36,7 +36,7 @@ dl {
 // Scheme specific list typography
 @each $scheme in map-keys($schemes) {
 	@if (map-val($schemes, $scheme, generate-scheme) and $scheme-includes-list-typography) {
-		&.scheme--#{$scheme} {
+		.scheme--#{$scheme} {
 
 			dl dt {
 				color: map-val($schemes, $scheme, fg-bold-color);

@@ -14,7 +14,7 @@ a {
 // Scheme specific link typography
 @each $scheme in map-keys($schemes) {
 	@if (map-val($schemes, $scheme, generate-scheme) and $scheme-includes-link-typography) {
-		&.scheme--#{$scheme} {
+		.scheme--#{$scheme} {
 
 			a {
 				color: map-val($schemes, $scheme, link-color);

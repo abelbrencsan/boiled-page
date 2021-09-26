@@ -39,7 +39,7 @@ blockquote {
 // Scheme specific blockquote typography
 @each $scheme in map-keys($schemes) {
 	@if (map-val($schemes, $scheme, generate-scheme) and $scheme-includes-blockquote-typography) {
-		&.scheme--#{$scheme} {
+		.scheme--#{$scheme} {
 
 			blockquote cite {
 				color: map-val($schemes, $scheme, fg-light-color);

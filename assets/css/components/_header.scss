@@ -41,7 +41,7 @@ header.header {
 /* Header component scheme modifications */
 @each $scheme in map-keys($schemes) {
 	@if (map-val($schemes, $scheme, generate-scheme) and $header-generate-scheme) {
-		&.scheme--#{$scheme} {
+		.scheme--#{$scheme} {
 
 			header.header p {
 				color: map-val($schemes, $scheme, fg-light-color);

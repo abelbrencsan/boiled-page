@@ -39,7 +39,7 @@ h6, .h6 {
 // Scheme specific heading typography
 @each $scheme in map-keys($schemes) {
 	@if (map-val($schemes, $scheme, generate-scheme) and $scheme-includes-heading-typography) {
-		&.scheme--#{$scheme} {
+		.scheme--#{$scheme} {
 
 			h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 				color: map-val($schemes, $scheme, fg-bold-color);
