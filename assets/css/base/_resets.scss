@@ -1,7 +1,5 @@
-/* Resets component */
+/* Resets */
 html {
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
 	box-sizing: border-box;
 	touch-action: manipulation;
 }
@@ -18,14 +16,6 @@ body {
 	min-width: 320px;
 }
 
-*:focus {
-	outline: 0;
-}
-
-.keyboard-focus:focus {
-	outline: 3px solid $focus-color;
-}
-
 fieldset {
 	border: 0;
 	margin: 0;
@@ -36,7 +26,7 @@ legend {
 	padding: 0;
 }
 
-input, textarea, button, select, label, a, div {
+input, select, textarea, button, label, a, div {
 	-webkit-tap-highlight-color: transparent;
 }
 
@@ -54,9 +44,4 @@ input::-ms-clear {
 
 select::-ms-expand {
 	display: none;
-}
-
-button::-moz-focus-inner, input::-moz-focus-inner, input::-moz-focus-outer {
-	border: none;
-	outline: none;
 }
