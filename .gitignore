@@ -1,5 +1,5 @@
 /assets/css/app.css
 /assets/js/scripts.js
 /deploy.php
-/node_modules/
-/package-lock.json
+/venv/
+*.egg-info/
