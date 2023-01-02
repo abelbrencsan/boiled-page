@@ -4,18 +4,13 @@ Boiled Page is a lightweight, responsive and extensible frontend framework for a
 
 ## Install
 
-First you need to install NodeJS and NPM. Boiled Page uses Gulp for compiling CSS and combining JavaScripts. To use Gulp, you need to install it globally with `npm install gulp -g` command. Then, you can install Boiled Page:
+First you need to install Python and Dart Sass. Boiled Page uses Gulp for compiling CSS and combining JavaScripts. To use Gulp, you need to install it globally with `npm install gulp -g` command. Then, you can install Boiled Page:
 
 - Navigate to the root directory of Boiled Page.
-- Run `npm install` to install all dependencies.
-- Run `gulp build` to compile CSS and combine JavaScripts given in `gulpfile.js`.
+- Run `pip install .` to install all dependencies.
+- Run `python build.py` to compile CSS and combine JavaScripts given in `build.py`.
 - Compiled CSS file is located in `/assets/css` directory.
 - Combined JavaScript file is located in `/assets/js` directory.
-
-Available Gulp tasks:
-
-- Run `gulp build` to compile CSS and combine JavaScripts
-- Run `gulp default` to compile CSS and combine JavaScripts and re-compile on file changes so you do not need to compile it manally each time.
 
 ## Asset strcuture
 
