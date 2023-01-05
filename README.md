@@ -12,7 +12,7 @@ First you need to install Python and Dart Sass. Boiled Page uses Gulp for compil
 - Compiled CSS file is located in `/assets/css` directory.
 - Combined JavaScript file is located in `/assets/js` directory.
 
-## Asset strcuture
+## Asset structure
 
 ### Styles
 
