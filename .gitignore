@@ -1,5 +1,6 @@
+*.egg-info/
+*.sublime-workspace
 /assets/css/app.css
 /assets/js/scripts.js
 /deploy.php
 /venv/
-*.egg-info/
