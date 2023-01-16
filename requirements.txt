@@ -1,2 +1,1 @@
 pyinotify
-jsmin

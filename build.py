@@ -1,7 +1,6 @@
 # Import modules
 import os
 
-import jsmin
 import pyinotify
 
 # Init variables
@@ -38,7 +37,7 @@ def buildScripts(paths):
         with open(src_filename, "r") as file:
             scripts += file.read()
     with open(dest_filename, "w") as file:
-        file.write(jsmin.jsmin(scripts).replace("\n", ""))
+        file.write(scripts)
 
     # Print results
     print("Scripts are built sucessfully.")
