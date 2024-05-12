@@ -406,7 +406,7 @@ Class name | Description | Example
 `text-right` | Align text right. | `<div class="text-right"></div>`
 
 ## Browser support
-Boiled Page supports all modern browsers. Internet Explorer is supported from version 11.
+Boiled Page supports all modern browsers.
 
 ## License
 Code released under the MIT Open Source license.

@@ -1,28 +1,31 @@
 /**
- * Focus tracker - v1.1.0
- * Copyright 2021 Abel Brencsan
+ * Focus tracker
+ * Copyright 2024 Abel Brencsan
  * Released under the MIT License
  */
-
-var FocusTracker = (function(){
+const FocusTracker = (function(){
 
 	'use strict';
 
-	var focusTracker = {};
-	var className = 'keyboard-focus';
-	var isUsingKeyboard = false;
+	let focusTracker = {};
+	let className = 'keyboard-focus';
+	let isUsingKeyboard = false;
 
 	/**
-	* Initialize focus tracker (public)
+	* Initialize focus tracker.
+	* 
+	* @public
 	*/
-	var init = function() {
+	let init = function() {
 		addEvents();
 	};
 
 	/**
-	* Add events to the document body (private)
+	* Add events to the document body.
+	* 
+	* @private
 	*/
-	var addEvents = function() {
+	let addEvents = function() {
 		document.body.addEventListener('keydown', preFocus);
 		document.body.addEventListener('mousedown', preFocus);
 		document.body.addEventListener('focusin', addFocus);
@@ -30,9 +33,11 @@ var FocusTracker = (function(){
 	};
 
 	/**
-	* Remove events from document body (private)
+	* Remove events from document body.
+	* 
+	* @private
 	*/
-	var removeEvents = function() {
+	let removeEvents = function() {
 		document.body.removeEventListener('keydown', preFocus);
 		document.body.removeEventListener('mousedown', preFocus);
 		document.body.removeEventListener('focusin', addFocus);
@@ -40,40 +45,51 @@ var FocusTracker = (function(){
 	};
 
 	/**
-	* Detect user is using keyboard or mouse (private)
-	* @param event object
+	* Detect user is using keyboard or mouse.
+	* 
+	* @private
+	* @param {Event} event
 	*/
-	var preFocus = function(event) {
+	let preFocus = function(event) {
 		isUsingKeyboard = (event.type === 'keydown');
 	};
 
 	/**
-	* Add focus tracker class on keyboard focus in (private)
-	* @param event object
+	* Add focus tracker class on keyboard focus in.
+	* 
+	* @private
+	* @param {Event} event
 	*/
-	var addFocus = function(event) {
+	let addFocus = function(event) {
 		if (isUsingKeyboard) event.target.classList.add(className);
 	};
 
 	/**
-	* Remove focus tracker class on focus out (private)
-	* @param event object
+	* Remove focus tracker class on focus out.
+	* 
+	* @private
+	* @param {Event} event
 	*/
-	var removeFocus = function(event) {
+	let removeFocus = function(event) {
 		event.target.classList.remove(className);
 	};
 
 	/**
-	* Destroy focus tracker (public)
+	* Destroy focus tracker.
+	* 
+	* @public
 	*/
-	var destroy = function() {
+	let destroy = function() {
 		removeEvents();
 	};
 
 	/**
-	* Get value of "isUsingKeyboard" (public)
+	* Get value of "isUsingKeyboard".
+	* 
+	* @private
+	* @return {bool}
 	*/
-	var getIsUsingKeyboard = function() {
+	let getIsUsingKeyboard = function() {
 		return isUsingKeyboard;
 	};
 
@@ -82,5 +98,5 @@ var FocusTracker = (function(){
 		destroy: destroy,
 		getIsUsingKeyboard: getIsUsingKeyboard
 	};
-
+	
 })();

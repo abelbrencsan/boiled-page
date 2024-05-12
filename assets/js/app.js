@@ -1,10 +1,9 @@
 /**
- * App - v.1.1.0
- * Copyright 2021 Abel Brencsan
+ * App
+ * Copyright 2024 Abel Brencsan
  * Released under the MIT License
  */
-
-var app = {
+const app = {
 
 	// App settings
 	isTouch: false,
@@ -18,7 +17,9 @@ var app = {
 	},
 
 	/**
-	 * Initialize app
+	 * Initialize app.
+	 * 
+	 * @public
 	 */
 	init: function() {
 
@@ -46,19 +47,41 @@ var app = {
 		});
 
 		// Breakpoint has changed
-		for (var key in app.breakpoints) {
+		for (let key in app.breakpoints) {
 			window.matchMedia(app.breakpoints[key]).addListener(app.onBreakpointChange);
 		}
 
-		// Initialize global modules
+		// Init global modules
 		FocusTracker.init();
 
+		// Init single-instance modules
+		app.detectBreakpointChange();
 	},
 
 	/**
-	 * Breakpoint has changed
+	 * Add event listeners for breakpoint changes.
+	 * 
+	 * @public
 	 */
-	onBreakpointChange: function(mediaQuery) {
+	detectBreakpointChange() {
+
+		// Init variables
+		let mql;
+
+		// Add event listeners for breakpoint changes
+		for (let key in app.breakpoints) {
+			mql = window.matchMedia(app.breakpoints[key]);
+			mql.addEventListener('change', app.onBreakpointChange);
+		}
+	},
+
+	/**
+	 * Event when breakpoint has been changed.
+	 * 
+	 * @public
+	 * @param {MediaQueryListEvent} event
+	 */
+	onBreakpointChange: function(event) {
 	}
 };
 
