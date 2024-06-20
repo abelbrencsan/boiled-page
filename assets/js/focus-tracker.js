@@ -87,7 +87,7 @@ const FocusTracker = (function(){
 	* Get value of "isUsingKeyboard".
 	* 
 	* @private
-	* @return {bool}
+	* @return {boolean}
 	*/
 	let getIsUsingKeyboard = function() {
 		return isUsingKeyboard;
